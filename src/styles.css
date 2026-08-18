@@ -4,6 +4,58 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --color-surface: #131313;
+  --color-surface-dim: #15121b;
+  --color-surface-bright: #3b3742;
+  --color-surface-container-lowest: #0f0d15;
+  --color-surface-container-low: #1d1a23;
+  --color-surface-container: #201f1f;
+  --color-surface-container-high: #2c2832;
+  --color-surface-container-highest: #37333d;
+  --color-surface-variant: #37333d;
+  --color-on-surface: #e5e2e1;
+  --color-on-surface-variant: #cbc3d7;
+  --color-outline: #958ea0;
+  --color-outline-variant: #494454;
+  --color-primary: #d0bcff;
+  --color-on-primary: #3c0091;
+  --color-primary-container: #6d28d9;
+  --color-on-primary-container: #ede9fe;
+  --color-secondary: #cebdff;
+  --color-on-secondary: #381385;
+  --color-secondary-container: #4f319c;
+  --color-tertiary: #ffb869;
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+  --color-background: #15121b;
+  --color-on-background: #e7e0ed;
+  --color-success: #34d399;
+
+  --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+  --spacing-margin-main: 16px;
+  --spacing-gutter-grid: 12px;
+  --spacing-stack-sm: 8px;
+  --spacing-stack-md: 16px;
+  --spacing-stack-lg: 24px;
+  --spacing-safe-area-top: 16px;
+  --spacing-safe-area-bottom: 16px;
+}
+
+@utility glass-panel {
+  background: linear-gradient(145deg, rgba(44, 44, 46, 0.4) 0%, rgba(28, 28, 30, 0.8) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 /*
  * Design system definition.
  *
@@ -139,6 +191,22 @@
 
   body {
     background-color: var(--color-background);
-    color: var(--color-foreground);
+    color: var(--color-on-background);
+    font-family: var(--font-sans);
+  }
+
+  .material-symbols-outlined {
+    font-family: "Material Symbols Outlined";
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
   }
 }
