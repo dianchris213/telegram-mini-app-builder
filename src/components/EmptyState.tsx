@@ -10,11 +10,13 @@ export function EmptyState({
   description?: string;
 }) {
   return (
-    <div className="flex flex-col items-center justify-center gap-2 rounded-[16px] border border-dashed border-outline-variant/40 px-4 py-8 text-center">
-      <Icon name={icon} className="text-[28px] text-outline" />
-      <p className="text-sm font-semibold text-on-surface">{title}</p>
+    <div className="surface-panel flex flex-col items-center justify-center gap-2 rounded-[18px] px-5 py-8 text-center">
+      <span className="flex h-11 w-11 items-center justify-center rounded-full bg-surface-variant/60 text-primary/70">
+        <Icon name={icon} className="text-[22px]" />
+      </span>
+      <p className="text-section text-on-surface">{title}</p>
       {description ? (
-        <p className="text-xs text-on-surface-variant">{description}</p>
+        <p className="max-w-[240px] text-meta text-on-surface-variant/80">{description}</p>
       ) : null}
     </div>
   );
